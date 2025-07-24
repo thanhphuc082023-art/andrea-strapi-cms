@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * header-menu service
+ * partner service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::header-menu.header-menu');
+module.exports = createCoreService('api::partner.partner');

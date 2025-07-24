@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_partner_rows",
+  "info": {
+    "displayName": "Partner row"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "unique": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images", "files"]
+    }
+  },
+  "config": {}
+}

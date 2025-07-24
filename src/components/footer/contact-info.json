@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_footer_contact_infos",
+  "info": {
+    "displayName": "contact-info"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "component",
+      "component": "footer.phone",
+      "repeatable": true
+    },
+    "email": {
+      "type": "component",
+      "component": "footer.email",
+      "repeatable": true
+    },
+    "website": {
+      "type": "component",
+      "component": "footer.website",
+      "repeatable": true
+    },
+    "phoneIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "websiteIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "mailIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

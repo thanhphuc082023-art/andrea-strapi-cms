@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * header-menu router
+ * menu router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::header-menu.header-menu');
+module.exports = createCoreRouter('api::menu.menu');

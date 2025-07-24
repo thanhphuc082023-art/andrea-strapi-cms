@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workflow_lists",
+  "info": {
+    "singularName": "workflow-list",
+    "pluralName": "workflow-lists",
+    "displayName": "Workflow list"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    }
+  }
+}

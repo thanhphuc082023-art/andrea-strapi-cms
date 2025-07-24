@@ -1,14 +1,11 @@
 {
-  "collectionName": "components_shared_items",
+  "collectionName": "components_shared_brand_slogans",
   "info": {
-    "displayName": "items"
+    "displayName": "brandSlogan"
   },
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
-    },
-    "url": {
       "type": "string"
     }
   },

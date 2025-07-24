@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_footer_office_locations",
+  "info": {
+    "displayName": "office-location"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "unique": true
+    },
+    "officeName": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "isMainOffice": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "config": {}
+}

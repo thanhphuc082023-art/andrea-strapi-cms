@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "brand_infos",
+  "info": {
+    "singularName": "brand-info",
+    "pluralName": "brand-infos",
+    "displayName": "BrandInfo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Andrea"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Tư vấn & thiết kế <br /> thương hiệu <strong>Cảm xúc</strong>",
+      "required": false
+    },
+    "brandSlogan": {
+      "type": "component",
+      "component": "shared.brand-slogan",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_partner_partners",
+  "info": {
+    "displayName": "Partner"
+  },
+  "options": {},
+  "attributes": {
+    "partner_row": {
+      "type": "component",
+      "component": "partner.partner-row",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

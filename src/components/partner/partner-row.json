@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_partner_partner_rows",
+  "info": {
+    "displayName": "Partner row"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "default": 1,
+      "unique": true
+    },
+    "partners": {
+      "type": "component",
+      "component": "partner.item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
