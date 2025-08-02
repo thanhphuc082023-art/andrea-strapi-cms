@@ -4,7 +4,7 @@
   "info": {
     "singularName": "book",
     "pluralName": "books",
-    "displayName": "book"
+    "displayName": "Book"
   },
   "options": {
     "draftAndPublish": true
@@ -30,6 +30,14 @@
     },
     "pages": {
       "type": "json"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
