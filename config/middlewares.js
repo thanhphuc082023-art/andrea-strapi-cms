@@ -27,11 +27,12 @@ module.exports = [
   {
     name: "strapi::body",
     config: {
-      formLimit: "256mb", // modify form body
-      jsonLimit: "256mb", // modify JSON body
-      textLimit: "256mb", // modify text body
+      formLimit: "256mb", // Tăng giới hạn cho dữ liệu form (ví dụ: lên 256MB)
+      jsonLimit: "256mb", // Tăng giới hạn cho dữ liệu JSON
+      textLimit: "256mb", // Tăng giới hạn cho dữ liệu văn bản
+      multipart: true, // Đảm bảo đã bật multipart cho việc upload file
       formidable: {
-        maxFileSize: 250 * 1024 * 1024 // multipart data, modify here limit of uploaded file size
+        maxFileSize: 256 * 1024 * 1024 // Tăng giới hạn kích thước file tối đa (256MB tính bằng bytes)
       }
     }
   },
