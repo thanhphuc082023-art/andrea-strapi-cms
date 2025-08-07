@@ -38,6 +38,15 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "downloadUrl": {
+      "type": "string"
     }
   }
 }
