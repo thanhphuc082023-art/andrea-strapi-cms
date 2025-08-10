@@ -47,6 +47,9 @@
     },
     "downloadUrl": {
       "type": "string"
+    },
+    "facebookUrl": {
+      "type": "string"
     }
   }
 }
