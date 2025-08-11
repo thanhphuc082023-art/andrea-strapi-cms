@@ -16,7 +16,7 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      origin: ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "https://andrea-landing.vercel.app"],
+      origin: ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "https://andrea-landing.vercel.app", "https://andrea.com.vn"],
       methods: ["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"]
     }
