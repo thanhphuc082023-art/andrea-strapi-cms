@@ -1,0 +1,119 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "projectIntroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "projectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "in-progress",
+        "completed"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "technologies": {
+      "type": "json"
+    },
+    "overview": {
+      "type": "blocks"
+    },
+    "challenge": {
+      "type": "blocks"
+    },
+    "solution": {
+      "type": "blocks"
+    },
+    "categoryId": {
+      "type": "integer"
+    },
+    "results": {
+      "type": "json"
+    },
+    "metrics": {
+      "type": "json"
+    },
+    "seo": {
+      "type": "json"
+    },
+    "projectMetaInfo": {
+      "type": "json"
+    },
+    "credits": {
+      "type": "json"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "featuredImageUploadId": {
+      "type": "string"
+    },
+    "galleryUploadIds": {
+      "type": "json"
+    },
+    "heroVideoUploadId": {
+      "type": "string"
+    },
+    "thumbnailUploadId": {
+      "type": "string"
+    },
+    "showcaseSections": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

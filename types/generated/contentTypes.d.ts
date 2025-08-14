@@ -770,6 +770,61 @@ export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiProjectProject extends Struct.CollectionTypeSchema {
+  collectionName: 'projects';
+  info: {
+    displayName: 'Project';
+    pluralName: 'projects';
+    singularName: 'project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    categoryId: Schema.Attribute.Integer;
+    challenge: Schema.Attribute.Blocks;
+    content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    credits: Schema.Attribute.JSON;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    featuredImage: Schema.Attribute.Media<'images'>;
+    featuredImageUploadId: Schema.Attribute.String;
+    gallery: Schema.Attribute.Media<'images'>;
+    galleryUploadIds: Schema.Attribute.JSON;
+    heroVideo: Schema.Attribute.Media<'images'>;
+    heroVideoUploadId: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::project.project'
+    > &
+      Schema.Attribute.Private;
+    metrics: Schema.Attribute.JSON;
+    overview: Schema.Attribute.Blocks;
+    projectIntroTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    projectMetaInfo: Schema.Attribute.JSON;
+    projectStatus: Schema.Attribute.Enumeration<
+      ['draft', 'in-progress', 'completed']
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    results: Schema.Attribute.JSON;
+    seo: Schema.Attribute.JSON;
+    showcaseSections: Schema.Attribute.JSON;
+    slug: Schema.Attribute.UID<'title'>;
+    solution: Schema.Attribute.Blocks;
+    technologies: Schema.Attribute.JSON;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    thumbnailUploadId: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceListServiceList extends Struct.SingleTypeSchema {
   collectionName: 'service_lists';
   info: {
@@ -1355,6 +1410,7 @@ declare module '@strapi/strapi' {
       'api::hero.hero': ApiHeroHero;
       'api::menu.menu': ApiMenuMenu;
       'api::partner.partner': ApiPartnerPartner;
+      'api::project.project': ApiProjectProject;
       'api::service-list.service-list': ApiServiceListServiceList;
       'api::workflow-list.workflow-list': ApiWorkflowListWorkflowList;
       'plugin::content-releases.release': PluginContentReleasesRelease;
