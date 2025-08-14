@@ -141,6 +141,27 @@ export interface PartnerPartnerRow extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectItemProjectItem extends Struct.ComponentSchema {
+  collectionName: 'components_project_item_project_items';
+  info: {
+    displayName: 'project-item';
+  };
+  attributes: {
+    position: Schema.Attribute.Integer;
+    project: Schema.Attribute.Relation<'oneToOne', 'api::project.project'>;
+  };
+}
+
+export interface ProjectsProjects extends Struct.ComponentSchema {
+  collectionName: 'components_projects_projects';
+  info: {
+    displayName: 'projects';
+  };
+  attributes: {
+    projectItem: Schema.Attribute.Component<'project-item.project-item', false>;
+  };
+}
+
 export interface ServiceItem extends Struct.ComponentSchema {
   collectionName: 'components_service_items';
   info: {
@@ -274,6 +295,8 @@ declare module '@strapi/strapi' {
       'partner.item': PartnerItem;
       'partner.partner': PartnerPartner;
       'partner.partner-row': PartnerPartnerRow;
+      'project-item.project-item': ProjectItemProjectItem;
+      'projects.projects': ProjectsProjects;
       'service.item': ServiceItem;
       'shared.brand-slogan': SharedBrandSlogan;
       'shared.media': SharedMedia;

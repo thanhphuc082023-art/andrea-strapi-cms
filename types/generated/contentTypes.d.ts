@@ -712,6 +712,36 @@ export interface ApiHeroHero extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomeFeaturedProjectHomeFeaturedProject
+  extends Struct.SingleTypeSchema {
+  collectionName: 'home_featured_projects';
+  info: {
+    displayName: 'Home Featured Project';
+    pluralName: 'home-featured-projects';
+    singularName: 'home-featured-project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-featured-project.home-featured-project'
+    > &
+      Schema.Attribute.Private;
+    projects: Schema.Attribute.Component<'projects.projects', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMenuMenu extends Struct.CollectionTypeSchema {
   collectionName: 'menus';
   info: {
@@ -1408,6 +1438,7 @@ declare module '@strapi/strapi' {
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
       'api::hero.hero': ApiHeroHero;
+      'api::home-featured-project.home-featured-project': ApiHomeFeaturedProjectHomeFeaturedProject;
       'api::menu.menu': ApiMenuMenu;
       'api::partner.partner': ApiPartnerPartner;
       'api::project.project': ApiProjectProject;
