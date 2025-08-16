@@ -114,6 +114,16 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "heroBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

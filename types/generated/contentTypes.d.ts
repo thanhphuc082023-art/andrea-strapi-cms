@@ -824,6 +824,9 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     featuredImageUploadId: Schema.Attribute.String;
     gallery: Schema.Attribute.Media<'images'>;
     galleryUploadIds: Schema.Attribute.JSON;
+    heroBanner: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     heroVideo: Schema.Attribute.Media<'images'>;
     heroVideoUploadId: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
