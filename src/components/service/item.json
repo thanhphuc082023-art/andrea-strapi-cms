@@ -41,6 +41,9 @@
       "type": "component",
       "component": "shared.slogan",
       "repeatable": true
+    },
+    "url": {
+      "type": "string"
     }
   },
   "config": {}

@@ -811,7 +811,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    categoryId: Schema.Attribute.Integer;
     challenge: Schema.Attribute.Blocks;
     content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;

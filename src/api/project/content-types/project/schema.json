@@ -50,9 +50,6 @@
     "solution": {
       "type": "blocks"
     },
-    "categoryId": {
-      "type": "integer"
-    },
     "results": {
       "type": "json"
     },

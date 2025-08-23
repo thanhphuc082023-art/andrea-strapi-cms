@@ -179,6 +179,7 @@ export interface ServiceItem extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<1>;
     slogan: Schema.Attribute.Component<'shared.slogan', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
   };
 }
 
