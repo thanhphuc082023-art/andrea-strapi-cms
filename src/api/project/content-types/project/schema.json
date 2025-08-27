@@ -121,6 +121,9 @@
         "videos",
         "audios"
       ]
+    },
+    "videoLink": {
+      "type": "string"
     }
   }
 }
