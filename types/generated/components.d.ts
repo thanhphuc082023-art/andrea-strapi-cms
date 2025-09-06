@@ -1,5 +1,56 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BrandInfoBrandInfo extends Struct.ComponentSchema {
+  collectionName: 'components_brand_info_brand_infos';
+  info: {
+    displayName: 'brandInfo';
+  };
+  attributes: {
+    brandSlogan: Schema.Attribute.Component<'brand-slogan.brand-slogan', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BrandSloganBrandSlogan extends Struct.ComponentSchema {
+  collectionName: 'components_brand_slogan_brand_slogans';
+  info: {
+    displayName: 'brandSlogan';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ContactInfoContactInfo extends Struct.ComponentSchema {
+  collectionName: 'components_contact_info_contact_infos';
+  info: {
+    displayName: 'contactInfo';
+  };
+  attributes: {
+    email: Schema.Attribute.Email;
+    phones: Schema.Attribute.JSON;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Th\u00F4ng tin li\u00EAn h\u1EC7'>;
+    website: Schema.Attribute.String;
+    websiteDisplay: Schema.Attribute.String;
+  };
+}
+
+export interface ContactSectionsContactSections extends Struct.ComponentSchema {
+  collectionName: 'components_contact_sections_contact_sections';
+  info: {
+    displayName: 'contactSections';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    linkText: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
+    position: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface FooterContactInfo extends Struct.ComponentSchema {
   collectionName: 'components_footer_contact_infos';
   info: {
@@ -101,6 +152,32 @@ export interface FooterWebsite extends Struct.ComponentSchema {
   };
 }
 
+export interface GoogleMapsGoogleMaps extends Struct.ComponentSchema {
+  collectionName: 'components_google_maps_google_maps';
+  info: {
+    displayName: 'googleMaps';
+  };
+  attributes: {
+    embedUrl: Schema.Attribute.Text;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'T\u00ECm ki\u1EBFm ch\u00FAng t\u00F4i tr\u00EAn Google Map'>;
+  };
+}
+
+export interface OfficesOffices extends Struct.ComponentSchema {
+  collectionName: 'components_offices_offices';
+  info: {
+    displayName: 'offices';
+  };
+  attributes: {
+    address: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'T\u1EA7ng 7 t\u00F2a nh\u00E0 DEYES, s\u1ED1 371 Nguy\u1EC5n Ki\u1EC7m, Ph\u01B0\u1EDDng H\u1EA1nh Th\u00F4ng, TP. H\u1ED3 Ch\u00ED Minh'>;
+    position: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Tr\u1EE5 s\u1EDF ch\u00EDnh t\u1EA1i TP. H\u1ED3 Ch\u00ED Minh'>;
+  };
+}
+
 export interface PartnerItem extends Struct.ComponentSchema {
   collectionName: 'components_partner_items';
   info: {
@@ -159,6 +236,18 @@ export interface ProjectsProjects extends Struct.ComponentSchema {
   };
   attributes: {
     projectItem: Schema.Attribute.Component<'project-item.project-item', false>;
+  };
+}
+
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    displayName: 'seo';
+  };
+  attributes: {
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    shareImage: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -283,9 +372,28 @@ export interface SharedSlogan extends Struct.ComponentSchema {
   };
 }
 
+export interface WorkingHoursWorkingHours extends Struct.ComponentSchema {
+  collectionName: 'components_working_hours_working_hours';
+  info: {
+    displayName: 'workingHours';
+  };
+  attributes: {
+    days: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Th\u1EE9 Hai - Th\u1EE9 S\u00E1u'>;
+    hours: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'09:00 - 17:30'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Gi\u1EDD l\u00E0m vi\u1EC7c'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'brand-info.brand-info': BrandInfoBrandInfo;
+      'brand-slogan.brand-slogan': BrandSloganBrandSlogan;
+      'contact-info.contact-info': ContactInfoContactInfo;
+      'contact-sections.contact-sections': ContactSectionsContactSections;
       'footer.contact-info': FooterContactInfo;
       'footer.email': FooterEmail;
       'footer.item': FooterItem;
@@ -293,11 +401,14 @@ declare module '@strapi/strapi' {
       'footer.phone': FooterPhone;
       'footer.social-media-link': FooterSocialMediaLink;
       'footer.website': FooterWebsite;
+      'google-maps.google-maps': GoogleMapsGoogleMaps;
+      'offices.offices': OfficesOffices;
       'partner.item': PartnerItem;
       'partner.partner': PartnerPartner;
       'partner.partner-row': PartnerPartnerRow;
       'project-item.project-item': ProjectItemProjectItem;
       'projects.projects': ProjectsProjects;
+      'seo.seo': SeoSeo;
       'service.item': ServiceItem;
       'shared.brand-slogan': SharedBrandSlogan;
       'shared.media': SharedMedia;
@@ -307,6 +418,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.slogan': SharedSlogan;
+      'working-hours.working-hours': WorkingHoursWorkingHours;
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_working_hours_working_hours",
+  "info": {
+    "displayName": "workingHours"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Giờ làm việc",
+      "required": false
+    },
+    "days": {
+      "type": "string",
+      "default": "Thứ Hai - Thứ Sáu"
+    },
+    "hours": {
+      "type": "string",
+      "default": "09:00 - 17:30"
+    }
+  },
+  "config": {}
+}

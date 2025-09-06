@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_brand_info_brand_infos",
+  "info": {
+    "displayName": "brandInfo"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "brandSlogan": {
+      "type": "component",
+      "component": "brand-slogan.brand-slogan",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_info_contact_infos",
+  "info": {
+    "displayName": "contactInfo"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Thông tin liên hệ"
+    },
+    "phones": {
+      "type": "json"
+    },
+    "email": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "websiteDisplay": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

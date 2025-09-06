@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_offices_offices",
+  "info": {
+    "displayName": "offices"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Trụ sở chính tại TP. Hồ Chí Minh"
+    },
+    "address": {
+      "type": "text",
+      "default": "Tầng 7 tòa nhà DEYES, số 371 Nguyễn Kiệm, Phường Hạnh Thông, TP. Hồ Chí Minh"
+    },
+    "position": {
+      "type": "integer",
+      "default": 1
+    }
+  },
+  "config": {}
+}

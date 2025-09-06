@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_contact_sections_contact_sections",
+  "info": {
+    "displayName": "contactSections"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "position": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

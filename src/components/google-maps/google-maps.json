@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_google_maps_google_maps",
+  "info": {
+    "displayName": "googleMaps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Tìm kiếm chúng tôi trên Google Map"
+    },
+    "embedUrl": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
