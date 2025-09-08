@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us-page",
+    "pluralName": "about-us-pages",
+    "displayName": "About us page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "heroVideo": {
+      "type": "component",
+      "component": "hero-video.hero-video",
+      "repeatable": false
+    },
+    "aboutUsContent": {
+      "type": "component",
+      "component": "about-us-content.about-us-content",
+      "repeatable": false
+    },
+    "visions": {
+      "type": "component",
+      "component": "vision.vision",
+      "repeatable": true
+    },
+    "workflow": {
+      "type": "component",
+      "component": "workflow.workflow",
+      "repeatable": false
+    }
+  }
+}

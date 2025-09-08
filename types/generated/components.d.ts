@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutUsContentAboutUsContent extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_content_about_us_contents';
+  info: {
+    displayName: 'About Us Content';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    introduction: Schema.Attribute.Text;
+    signature: Schema.Attribute.String;
+  };
+}
+
 export interface BrandInfoBrandInfo extends Struct.ComponentSchema {
   collectionName: 'components_brand_info_brand_infos';
   info: {
@@ -48,6 +60,16 @@ export interface ContactSectionsContactSections extends Struct.ComponentSchema {
     linkUrl: Schema.Attribute.String;
     position: Schema.Attribute.Integer;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface DescriptionDescription extends Struct.ComponentSchema {
+  collectionName: 'components_description_descriptions';
+  info: {
+    displayName: 'description';
+  };
+  attributes: {
+    value: Schema.Attribute.Text;
   };
 }
 
@@ -161,6 +183,29 @@ export interface GoogleMapsGoogleMaps extends Struct.ComponentSchema {
     embedUrl: Schema.Attribute.Text;
     title: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'T\u00ECm ki\u1EBFm ch\u00FAng t\u00F4i tr\u00EAn Google Map'>;
+  };
+}
+
+export interface HeroVideoHeroVideo extends Struct.ComponentSchema {
+  collectionName: 'components_hero_video_hero_videos';
+  info: {
+    displayName: 'Hero Video';
+  };
+  attributes: {
+    desktopBanner: Schema.Attribute.Media<'images'>;
+    desktopVideo: Schema.Attribute.Media<'videos'>;
+    mobileBanner: Schema.Attribute.Media<'images'>;
+    mobileVideo: Schema.Attribute.Media<'videos'>;
+  };
+}
+
+export interface ImageImage extends Struct.ComponentSchema {
+  collectionName: 'components_image_images';
+  info: {
+    displayName: 'image';
+  };
+  attributes: {
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -372,6 +417,28 @@ export interface SharedSlogan extends Struct.ComponentSchema {
   };
 }
 
+export interface VisionVision extends Struct.ComponentSchema {
+  collectionName: 'components_vision_visions';
+  info: {
+    displayName: 'Vision';
+  };
+  attributes: {
+    contents: Schema.Attribute.Component<'description.description', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WorkflowWorkflow extends Struct.ComponentSchema {
+  collectionName: 'components_workflow_workflows';
+  info: {
+    displayName: 'Workflow';
+  };
+  attributes: {
+    images: Schema.Attribute.Component<'image.image', true>;
+    slogan: Schema.Attribute.Text;
+  };
+}
+
 export interface WorkingHoursWorkingHours extends Struct.ComponentSchema {
   collectionName: 'components_working_hours_working_hours';
   info: {
@@ -390,10 +457,12 @@ export interface WorkingHoursWorkingHours extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-us-content.about-us-content': AboutUsContentAboutUsContent;
       'brand-info.brand-info': BrandInfoBrandInfo;
       'brand-slogan.brand-slogan': BrandSloganBrandSlogan;
       'contact-info.contact-info': ContactInfoContactInfo;
       'contact-sections.contact-sections': ContactSectionsContactSections;
+      'description.description': DescriptionDescription;
       'footer.contact-info': FooterContactInfo;
       'footer.email': FooterEmail;
       'footer.item': FooterItem;
@@ -402,6 +471,8 @@ declare module '@strapi/strapi' {
       'footer.social-media-link': FooterSocialMediaLink;
       'footer.website': FooterWebsite;
       'google-maps.google-maps': GoogleMapsGoogleMaps;
+      'hero-video.hero-video': HeroVideoHeroVideo;
+      'image.image': ImageImage;
       'offices.offices': OfficesOffices;
       'partner.item': PartnerItem;
       'partner.partner': PartnerPartner;
@@ -418,6 +489,8 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.slogan': SharedSlogan;
+      'vision.vision': VisionVision;
+      'workflow.workflow': WorkflowWorkflow;
       'working-hours.working-hours': WorkingHoursWorkingHours;
     }
   }

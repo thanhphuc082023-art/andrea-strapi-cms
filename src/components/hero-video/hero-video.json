@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_hero_video_hero_videos",
+  "info": {
+    "displayName": "Hero Video"
+  },
+  "options": {},
+  "attributes": {
+    "desktopVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "mobileVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "mobileBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "desktopBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

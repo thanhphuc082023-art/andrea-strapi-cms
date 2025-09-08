@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_workflow_workflows",
+  "info": {
+    "displayName": "Workflow"
+  },
+  "options": {},
+  "attributes": {
+    "slogan": {
+      "type": "text"
+    },
+    "images": {
+      "type": "component",
+      "component": "image.image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

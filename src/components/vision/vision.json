@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_vision_visions",
+  "info": {
+    "displayName": "Vision"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "component",
+      "component": "description.description",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

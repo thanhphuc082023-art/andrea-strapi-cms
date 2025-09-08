@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_description_descriptions",
+  "info": {
+    "displayName": "description"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
