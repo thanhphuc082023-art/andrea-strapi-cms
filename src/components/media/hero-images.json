@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_media_hero_images",
+  "info": {
+    "displayName": "hero-images"
+  },
+  "options": {},
+  "attributes": {
+    "desktop": {
+      "type": "component",
+      "component": "media.file-upload",
+      "repeatable": false
+    },
+    "mobile": {
+      "type": "component",
+      "component": "media.file-upload",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

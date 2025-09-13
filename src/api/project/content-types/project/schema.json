@@ -124,6 +124,9 @@
     },
     "videoLink": {
       "type": "string"
+    },
+    "body": {
+      "type": "json"
     }
   }
 }

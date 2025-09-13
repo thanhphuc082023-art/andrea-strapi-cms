@@ -12,6 +12,18 @@ export interface AboutUsContentAboutUsContent extends Struct.ComponentSchema {
   };
 }
 
+export interface AuthorAuthorInfo extends Struct.ComponentSchema {
+  collectionName: 'components_author_author_infos';
+  info: {
+    displayName: 'author-info';
+  };
+  attributes: {
+    avatar: Schema.Attribute.Component<'media.file-upload', false>;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BrandInfoBrandInfo extends Struct.ComponentSchema {
   collectionName: 'components_brand_info_brand_infos';
   info: {
@@ -206,6 +218,29 @@ export interface ImageImage extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface MediaFileUpload extends Struct.ComponentSchema {
+  collectionName: 'components_media_file_uploads';
+  info: {
+    displayName: 'File upload';
+  };
+  attributes: {
+    file: Schema.Attribute.Media<'images'>;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface MediaHeroImages extends Struct.ComponentSchema {
+  collectionName: 'components_media_hero_images';
+  info: {
+    displayName: 'hero-images';
+  };
+  attributes: {
+    desktop: Schema.Attribute.Component<'media.file-upload', false>;
+    mobile: Schema.Attribute.Component<'media.file-upload', false>;
   };
 }
 
@@ -458,6 +493,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about-us-content.about-us-content': AboutUsContentAboutUsContent;
+      'author.author-info': AuthorAuthorInfo;
       'brand-info.brand-info': BrandInfoBrandInfo;
       'brand-slogan.brand-slogan': BrandSloganBrandSlogan;
       'contact-info.contact-info': ContactInfoContactInfo;
@@ -473,6 +509,8 @@ declare module '@strapi/strapi' {
       'google-maps.google-maps': GoogleMapsGoogleMaps;
       'hero-video.hero-video': HeroVideoHeroVideo;
       'image.image': ImageImage;
+      'media.file-upload': MediaFileUpload;
+      'media.hero-images': MediaHeroImages;
       'offices.offices': OfficesOffices;
       'partner.item': PartnerItem;
       'partner.partner': PartnerPartner;

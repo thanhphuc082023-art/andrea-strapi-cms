@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_media_file_uploads",
+  "info": {
+    "displayName": "File upload"
+  },
+  "options": {},
+  "attributes": {
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_author_author_infos",
+  "info": {
+    "displayName": "author-info"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "type": "component",
+      "component": "media.file-upload",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
