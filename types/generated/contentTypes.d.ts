@@ -388,10 +388,10 @@ export interface ApiAboutUsPageAboutUsPage extends Struct.SingleTypeSchema {
       'about-us-content.about-us-content',
       false
     >;
+    coreValue: Schema.Attribute.Component<'core-value.core-value', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heroVideo: Schema.Attribute.Component<'hero-video.hero-video', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

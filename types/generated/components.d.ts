@@ -75,6 +75,29 @@ export interface ContactSectionsContactSections extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreValueCoreValue extends Struct.ComponentSchema {
+  collectionName: 'components_core_value_core_values';
+  info: {
+    displayName: 'coreValue';
+  };
+  attributes: {
+    coreValues: Schema.Attribute.Component<'core-values.core-values', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CoreValuesCoreValues extends Struct.ComponentSchema {
+  collectionName: 'components_core_values_core_values';
+  info: {
+    displayName: 'Core values';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface DescriptionDescription extends Struct.ComponentSchema {
   collectionName: 'components_description_descriptions';
   info: {
@@ -459,6 +482,7 @@ export interface VisionVision extends Struct.ComponentSchema {
   };
   attributes: {
     contents: Schema.Attribute.Component<'description.description', true>;
+    image: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String;
   };
 }
@@ -498,6 +522,8 @@ declare module '@strapi/strapi' {
       'brand-slogan.brand-slogan': BrandSloganBrandSlogan;
       'contact-info.contact-info': ContactInfoContactInfo;
       'contact-sections.contact-sections': ContactSectionsContactSections;
+      'core-value.core-value': CoreValueCoreValue;
+      'core-values.core-values': CoreValuesCoreValues;
       'description.description': DescriptionDescription;
       'footer.contact-info': FooterContactInfo;
       'footer.email': FooterEmail;

@@ -16,11 +16,6 @@
       "component": "seo.seo",
       "repeatable": false
     },
-    "heroVideo": {
-      "type": "component",
-      "component": "hero-video.hero-video",
-      "repeatable": false
-    },
     "aboutUsContent": {
       "type": "component",
       "component": "about-us-content.about-us-content",
@@ -34,6 +29,11 @@
     "workflow": {
       "type": "component",
       "component": "workflow.workflow",
+      "repeatable": false
+    },
+    "coreValue": {
+      "type": "component",
+      "component": "core-value.core-value",
       "repeatable": false
     }
   }

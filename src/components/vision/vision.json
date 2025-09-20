@@ -12,6 +12,13 @@
       "type": "component",
       "component": "description.description",
       "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   },
   "config": {}
